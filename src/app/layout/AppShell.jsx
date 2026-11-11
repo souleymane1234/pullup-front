@@ -1,16 +1,18 @@
 import { useState } from 'react';
-import { Link, ScrollRestoration } from 'react-router-dom';
+import { Link, ScrollRestoration, useNavigate } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { Shell } from '@/components/layout/Shell/Shell.jsx';
 import { Avatar } from '@/components/ui/Avatar/Avatar.jsx';
 import { Icon } from '@/components/ui/Icon/Icon.jsx';
-import { useSession } from '@/features/auth/index.js';
+import { useLogout, useSession } from '@/features/auth/index.js';
 import { Footer } from '@/features/marketing/index.js';
 import { NotificationsDialog, Onboarding, useFlags, useNotifications } from '@/features/platform/index.js';
 import logo from '@/assets/logo.png';
 
 function AccountActions({ session, role }) {
+  const navigate = useNavigate();
   const [open, setOpen] = useState(false);
+  const { mutate: signOut, isPending } = useLogout(() => navigate('/'));
   const { data: notifications = [] } = useNotifications(role !== 'visitor');
   const unread = notifications.filter((n) => !n.r).length;
 
@@ -39,6 +41,9 @@ function AccountActions({ session, role }) {
         <Avatar {...session.avatar} size={34} />
         <span className="hide-m small" style={{ fontWeight: 600 }}>{session.name}</span>
       </Link>
+      <button type="button" className="btn ghost sm" disabled={isPending} onClick={() => signOut()}>
+        Se déconnecter
+      </button>
     </>
   );
 }

@@ -53,6 +53,13 @@ export default defineConfig({
   server: {
     port: 6010,
     strictPort: true,
+    // Chrome bloque le port 6000 (X11). Le navigateur parle à 6010, Vite relaie vers l'API.
+    proxy: {
+      '/api': {
+        target: 'http://127.0.0.1:6000',
+        changeOrigin: true,
+      },
+    },
   },
   build: {
     rollupOptions: {
