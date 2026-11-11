@@ -1,0 +1,31 @@
+{
+  "nav": {
+    "home": "Accueil",
+    "influencers": "Influenceurs",
+    "explore": "Explorer",
+    "matching": "Matching IA",
+    "matchingShort": "Matching",
+    "pricing": "Tarifs",
+    "space": "Mon espace",
+    "spaceShort": "Espace",
+    "campaigns": "Campagnes",
+    "admin": "Administration",
+    "adminShort": "Admin",
+    "account": "Compte",
+    "login": "Connexion",
+    "main": "Principal",
+    "tabs": "Navigation mobile",
+    "skip": "Aller au contenu"
+  },
+  "common": {
+    "loading": "Chargement",
+    "emptyTitle": "Rien à afficher",
+    "emptyText": "Aucun élément ne correspond à cette vue.",
+    "errorTitle": "Impossible de charger",
+    "errorText": "La requête n'a pas abouti.",
+    "retry": "Réessayer",
+    "search": "Rechercher",
+    "theme": "Changer le thème",
+    "language": "Changer de langue"
+  }
+}

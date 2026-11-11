@@ -1,0 +1,31 @@
+{
+  "nav": {
+    "home": "Home",
+    "influencers": "Influencers",
+    "explore": "Explore",
+    "matching": "AI matching",
+    "matchingShort": "Matching",
+    "pricing": "Pricing",
+    "space": "My space",
+    "spaceShort": "Space",
+    "campaigns": "Campaigns",
+    "admin": "Administration",
+    "adminShort": "Admin",
+    "account": "Account",
+    "login": "Log in",
+    "main": "Main",
+    "tabs": "Mobile navigation",
+    "skip": "Skip to content"
+  },
+  "common": {
+    "loading": "Loading",
+    "emptyTitle": "Nothing to show",
+    "emptyText": "No item matches this view.",
+    "errorTitle": "Could not load",
+    "errorText": "The request did not succeed.",
+    "retry": "Try again",
+    "search": "Search",
+    "theme": "Toggle theme",
+    "language": "Change language"
+  }
+}
